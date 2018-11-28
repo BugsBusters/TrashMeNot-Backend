@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -68,5 +69,17 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+
+
+    public function apiRegister(Request $request)
+
+    {
+        $this->validator($request->all())->validate();
+
+        $user = $this->create($request->all());
+
+        return response()->json($user, 200) ;
+
     }
 }
