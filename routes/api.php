@@ -88,3 +88,11 @@ Route::middleware('auth:api')->get('/rate/{id}','RateController@find');
 Route::middleware('auth:api')->put('/rate','RateController@put');
 Route::middleware('auth:api')->patch('/rate/{id}','RateController@patch');
 Route::middleware('auth:api')->delete('/rate/{id}','RateController@delete');
+
+//Route Traguardi
+
+Route::middleware('auth:api')->get('/traguardi','TraguardiController@all');
+Route::middleware('auth:api')->get('/traguardo/{id}','TraguardiController@find');
+Route::middleware('auth:api')->put('/traguardo','TraguardiController@put');
+Route::middleware('auth:api')->patch('/traguardo/{id}','TraguardiController@patch');
+Route::middleware('auth:api')->delete('/traguard/{id}','TraguardiController@delete');
