@@ -81,3 +81,10 @@ Route::middleware('auth:api')->put('/dettagliordine','OrdiniDettagliController@p
 Route::middleware('auth:api')->patch('/dettagliordine/{id}','OrdiniDettagliController@patch');
 Route::middleware('auth:api')->delete('/dettagliordine/{id}','OrdiniDettagliController@delete');
 
+//Route Rate
+
+Route::middleware('auth:api')->get('/rate','RateController@all');
+Route::middleware('auth:api')->get('/rate/{id}','RateController@find');
+Route::middleware('auth:api')->put('/rate','RateController@put');
+Route::middleware('auth:api')->patch('/rate/{id}','RateController@patch');
+Route::middleware('auth:api')->delete('/rate/{id}','RateController@delete');
