@@ -51,6 +51,8 @@ class NegoziController extends Controller
             return response()->json($negozio, 200);
         return  response()->json($request, 500);
 
+
+
     }
 
 
