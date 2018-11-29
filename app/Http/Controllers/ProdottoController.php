@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Model\Prodotto;
 use http\Env\Response;
+
 use Illuminate\Http\Request;
 
 class ProdottoController extends Controller
 {
+
     public function all()
     {
         return response()->json(Prodotto::all(),200);
@@ -58,7 +61,5 @@ class ProdottoController extends Controller
         return response()->json($id, 500);
 
     }
-
-
 
 }
