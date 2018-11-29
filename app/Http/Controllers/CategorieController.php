@@ -11,7 +11,9 @@ class CategorieController extends Controller
 
     public function all()
     {
+
         return response()->json(Categoria::all(), 200);
+        
     }
 
 
