@@ -10,4 +10,9 @@ class Negozio extends Model
     protected $table = 'negozi';
     public $timestamps = false;
 
+    public function prodotti()
+    {
+        return $this->hasMany('App\Model\Prodotto','commerciante_id','id');
+    }
+
 }

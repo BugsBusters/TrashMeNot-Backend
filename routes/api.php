@@ -47,6 +47,7 @@ Route::middleware('auth:api')->get('/negozio/{id}','NegozioController@find');
 Route::middleware('auth:api')->put('/negozio','NegozioController@put');
 Route::middleware('auth:api')->patch('/negozio/{id}','NegozioController@patch');
 Route::middleware('auth:api')->delete('/negozio/{id}','NegozioController@delete');
+Route::middleware('auth:api')->get('/negozio/{id}/prodotti','NegozioController@allProdotti');
 
 
 

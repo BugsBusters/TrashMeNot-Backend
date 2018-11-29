@@ -64,6 +64,17 @@ class NegozioController extends Controller
         return response()->json($id, 500);
     }
 
+    /**
+     * Metodo che prende tutti i prodotti di un negozio
+     *
+     */
+
+    public function AllProdotti($id)
+    {
+        return response()->json(Negozio::findOrFail($id)->with('prodotti')->get(),200);
+
+    }
+
 
 
 }
