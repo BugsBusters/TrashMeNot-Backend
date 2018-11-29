@@ -13,6 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::get('/hello-world',function(){
+    return response()->json("hello bugbuster my old friend!",200);
+});
+
 Route::post('/register','Auth\RegisterController@apiRegister');
 
 
