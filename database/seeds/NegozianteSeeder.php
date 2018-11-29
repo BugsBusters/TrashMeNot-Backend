@@ -13,7 +13,7 @@ class NegozianteSeeder extends Seeder
     {
         DB::table('negozi')->insert([
             'nome' => "Negozio 1",
-            'piva' => "22900",
+            'p_iva' => "22900",
             'user_id' => "1",
         ]);
     }
