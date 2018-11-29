@@ -1,43 +1,49 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: peanutonetwo
+ * Date: 29/11/18
+ * Time: 12.39
+ */
 
 namespace Tests\Unit;
 
-use App\Model\Categoria;
+
+use App\Model\Negozio;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class CategoriaControllerTest extends TestCase
+class NegozioControllerTest extends TestCase
+
 {
-
-    // CRUD  CREATE READ UPDATE DELETE (PUT GET PATCH DELETE)
     use WithoutMiddleware;
-
 
     public function testPut()
     {
-        $this->json('PUT','/api/categoria/',[
-            'categoria' => 'Categoria1'
+        $this->json('PUT','/api/negozi/',[
+            'nome' => 'nome1',
+            'user_id' => '1',
+            'p_iva' =>'123456789'
         ])->assertStatus(200);
     }
 
     public function testAll()
     {
-        $this->json('GET','/api/categorie')->assertStatus(200);
+        $this->json('GET','/api/negozi')->assertStatus(200);
     }
 
 
     public function testFind()
     {
-        $id = Categoria::all()->last()->id;
+        $id = Negozio::all()->last()->id;
         $this->json('GET', "/api/negozi/$id")->assertStatus(200);
     }
 
     public function testPatch()
     {
-        $id = Categoria::all()->last()->id;
-        $this->json('PATCH',"/api/categoria/$id",[
-            'categoria' => 'Categoria2'
+        $id = Negozio::all()->last()->id;
+        $this->json('PATCH',"/api/negozi/$id",[
+            '' => 'Categoria2'
         ])->assertStatus(200);
     }
 
@@ -46,4 +52,8 @@ class CategoriaControllerTest extends TestCase
         $id = Categoria::all()->last()->id;
         $this->json('DELETE',"/api/categoria/$id")->assertStatus(200);
     }
+
+
+
+
 }

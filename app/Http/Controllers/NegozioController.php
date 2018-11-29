@@ -6,7 +6,7 @@ use App\Model\Negozio;
 use http\Env\Response;
 use Illuminate\Http\Request;
 
-class NegoziController extends Controller
+class NegozioController extends Controller
 {
 
     public function all()
@@ -32,7 +32,7 @@ class NegoziController extends Controller
         $negozio->p_iva =  $request->p_iva;
         $negozio->user_id = $request->user_id;
 
-        if ($negozio.save())
+        if ($negozio->save())
             return response()->json($negozio, 200);
         return  response()->json($request, 500);
 
