@@ -15,6 +15,7 @@ class OrdiniTestataSeeder extends Seeder
     {
         DB::table('ordini_testata')->insert([
 
+            'data' => '11/01/2018',
             'venditore_id' => "1",
             'cliente_id' => "1",
             'totale' => '200',
