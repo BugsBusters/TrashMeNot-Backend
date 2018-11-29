@@ -47,6 +47,15 @@ Route::middleware('auth:api')->put('/negozio','NegozioController@put');
 Route::middleware('auth:api')->patch('/negozio/{id}','NegozioController@patch');
 Route::middleware('auth:api')->delete('/negozio/{id}','NegozioController@delete');
 
+
+
+//Route domande
+Route::middleware('auth:api')->get('/domande','DomandeController@all');
+Route::middleware('auth:api')->get('/domanda/{id}','DomandeController@find');
+Route::middleware('auth:api')->put('/domanda','DomandeController@put');
+Route::middleware('auth:api')->patch('/domanda/{id}','DomandeController@patch');
+Route::middleware('auth:api')->delete('/domanda/{id}','DomandeController@delete');
+
 //Route Prodotto
 
 Route::middleware('auth:api')->get('/prodotti','ProdottoController@all');
