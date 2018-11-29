@@ -29,7 +29,7 @@ Route::middleware('auth:api')->delete('/categoria/{id}','CategorieController@del
 
 //Route negozio
 Route::middleware('auth:api')->get('/negozi','NegozioController@all');
-Route::middleware('auth:api')->get('/negozi/{id}','NegozioController@find');
-Route::middleware('auth:api')->put('/negozi','NegozioController@put');
-Route::middleware('auth:api')->patch('/negozi/{id}','NegozioController@patch');
-Route::middleware('auth:api')->delete('/negozi/{id}','NegozioController@delete');
+Route::middleware('auth:api')->get('/negozio/{id}','NegozioController@find');
+Route::middleware('auth:api')->put('/negozio','NegozioController@put');
+Route::middleware('auth:api')->patch('/negozio/{id}','NegozioController@patch');
+Route::middleware('auth:api')->delete('/negozio/{id}','NegozioController@delete');

@@ -20,7 +20,7 @@ class NegozioControllerTest extends TestCase
 
     public function testPut()
     {
-        $this->json('PUT','/api/negozi/',[
+        $this->json('PUT','/api/negozio/',[
             'nome' => 'nome1',
             'user_id' => '1',
             'p_iva' =>'123456789'
@@ -36,21 +36,23 @@ class NegozioControllerTest extends TestCase
     public function testFind()
     {
         $id = Negozio::all()->last()->id;
-        $this->json('GET', "/api/negozi/$id")->assertStatus(200);
+        $this->json('GET', "/api/negozio/$id")->assertStatus(200);
     }
 
     public function testPatch()
     {
         $id = Negozio::all()->last()->id;
-        $this->json('PATCH',"/api/negozi/$id",[
-            '' => 'Categoria2'
+        $this->json('PATCH',"/api/negozio/$id",[
+            'nome' => 'nome1',
+            'user_id' => '1',
+            'p_iva' =>'123456789'
         ])->assertStatus(200);
     }
 
     public function testDelete()
     {
-        $id = Categoria::all()->last()->id;
-        $this->json('DELETE',"/api/categoria/$id")->assertStatus(200);
+        $id = Negozio::all()->last()->id;
+        $this->json('DELETE',"/api/negozio/$id")->assertStatus(200);
     }
 
 

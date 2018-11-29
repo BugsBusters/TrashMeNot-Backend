@@ -13,7 +13,7 @@ class CategorieController extends Controller
     {
 
         return response()->json(Categoria::all(), 200);
-        
+
     }
 
 

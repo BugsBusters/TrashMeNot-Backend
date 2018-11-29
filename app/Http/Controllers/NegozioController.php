@@ -47,7 +47,7 @@ class NegozioController extends Controller
         $negozio->p_iva =  $request->p_iva;
         $negozio->user_id = $request->user_id;
 
-        if($negozio.save())
+        if($negozio->save())
             return response()->json($negozio, 200);
         return  response()->json($request, 500);
 
