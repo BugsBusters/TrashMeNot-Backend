@@ -52,4 +52,14 @@ class CategorieController extends Controller
         return response()->json($id, 500);
     }
 
+    /**
+     * Metodo che prende tutti i prodotti per ogni categoria
+     *
+     */
+    public function allProdotti($id)
+    {
+        return response()->json(Categoria::findOrFail($id)->with('prodotti')->get(),200);
+    }
+    
+    
 }
