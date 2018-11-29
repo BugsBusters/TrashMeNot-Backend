@@ -96,3 +96,11 @@ Route::middleware('auth:api')->get('/traguardo/{id}','TraguardiController@find')
 Route::middleware('auth:api')->put('/traguardo','TraguardiController@put');
 Route::middleware('auth:api')->patch('/traguardo/{id}','TraguardiController@patch');
 Route::middleware('auth:api')->delete('/traguard/{id}','TraguardiController@delete');
+
+//Route Badge
+
+Route::middleware('auth:api')->get('/badge','BadgeController@all');
+Route::middleware('auth:api')->get('/badge/{id}','BadgeController@find');
+Route::middleware('auth:api')->put('/badge','BadgeController@put');
+Route::middleware('auth:api')->patch('/badge/{id}','BadgeController@patch');
+Route::middleware('auth:api')->delete('/badge/{id}','BadgeController@delete');
