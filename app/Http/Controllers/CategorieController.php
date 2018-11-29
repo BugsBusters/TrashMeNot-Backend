@@ -29,6 +29,8 @@ class CategorieController extends Controller
             return response()->json($categoria, 200);
         return response()->json($request, 500);
 
+
+
     }
 
     public function patch(Request $request, $id)

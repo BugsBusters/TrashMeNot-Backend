@@ -26,3 +26,10 @@ Route::middleware('auth:api')->get('/categoria/{id}','CategorieController@find')
 Route::middleware('auth:api')->put('/categoria','CategorieController@put');
 Route::middleware('auth:api')->patch('/categoria/{id}','CategorieController@patch');
 Route::middleware('auth:api')->delete('/categoria/{id}','CategorieController@delete');
+
+//Route negozio
+Route::middleware('auth:api')->get('/negozi','NegoziController@all');
+Route::middleware('auth:api')->get('/negozi/{id}','NegoziController@find');
+Route::middleware('auth:api')->put('/negozi','NegoziController@put');
+Route::middleware('auth:api')->patch('/negozi/{id}','NegoziController@patch');
+Route::middleware('auth:api')->delete('/negozi/{id}','NegoziController@delete');
