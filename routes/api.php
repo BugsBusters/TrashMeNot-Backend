@@ -19,3 +19,10 @@ Route::post('/register','Auth\RegisterController@apiRegister');
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//Route categoria
+Route::middleware('auth:api')->get('/categorie','CategorieController@all');
+Route::middleware('auth:api')->get('/categoria/{id}','CategorieController@find');
+Route::middleware('auth:api')->put('/categoria','CategorieController@put');
+Route::middleware('auth:api')->patch('/categoria/{id}','CategorieController@patch');
+Route::middleware('auth:api')->delete('/categoria/{id}','CategorieController@delete');
