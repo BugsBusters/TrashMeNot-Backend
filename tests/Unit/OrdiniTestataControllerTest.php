@@ -23,14 +23,14 @@ class OrdiniTestataControllerTest extends TestCase
         $this->json('PUT','/api/ordinetestata/',[
             "cliente_id" => "1",
             "venditore_id" => "1",
-            "sconto" =>"20",
-            "totale" => "200",
+            "sconto" =>"10",
+            "totale" => "100",
         ])->assertStatus(200);
     }
 
     public function testAll()
     {
-        $this->json('GET','/api/ordinitestate')->assertStatus(200);
+        $this->json('GET','/api/ordinitestata')->assertStatus(200);
     }
 
     public function testFind()
