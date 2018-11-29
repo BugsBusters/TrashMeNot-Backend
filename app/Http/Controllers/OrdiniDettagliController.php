@@ -22,10 +22,10 @@ class OrdiniDettagliController extends Controller
     {
         $dettagli =  new Ordini_Dettagli();
 
-        $dettagli->testataid =  $request->testataid;
-        $dettagli->prodottiid =  $request->prodottiid;
+        $dettagli->testata_id =  $request->testata_id;
+        $dettagli->prodotti_id =  $request->prodotti_id;
         $dettagli->quantita  = $request->quantita;
-        $dettagli->prezzounitario = $request->prezzounitario;
+        $dettagli->prezzo_unitario = $request->prezzo_unitario;
         if ($dettagli->save())
             return response()->json($dettagli, 200);
         return response()->json($request, 500);
@@ -37,10 +37,10 @@ class OrdiniDettagliController extends Controller
     {
         $dettagli =  Ordini_Dettagli::find($id);
 
-        $dettagli->testataid =  $request->testataid;
-        $dettagli->prodottiid =  $request->prodottiid;
+        $dettagli->testata_id =  $request->testata_id;
+        $dettagli->prodotti_id =  $request->prodotti_id;
         $dettagli->quantita  = $request->quantita;
-        $dettagli->prezzounitario = $request->prezzounitario;
+        $dettagli->prezzo_unitario = $request->prezzo_unitario;
 
         if ($dettagli->save())
             return response()->json($dettagli, 200);
