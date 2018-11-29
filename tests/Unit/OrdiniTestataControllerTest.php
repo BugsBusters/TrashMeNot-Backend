@@ -30,7 +30,7 @@ class OrdiniTestataControllerTest extends TestCase
 
     public function testAll()
     {
-        $this->json('GET','/api/ordinitestate')->assertStatus(200);
+        $this->json('GET','/api/ordinitestata')->assertStatus(200);
     }
 
     public function testFind()
