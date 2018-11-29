@@ -3,10 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\Ordine_Testata;
-use App\Model\Ordini_Dettagli;
-use http\Env\Response;
 use Illuminate\Http\Request;
-use phpDocumentor\Reflection\DocBlock\Tags\Reference\Url;
 
 class OrdiniTestataController extends Controller
 {
@@ -37,7 +34,7 @@ class OrdiniTestataController extends Controller
         return response()->json($request, 500);
     }
 
-    public function patch( Request $request, $id)
+    public function patch(Request $request, $id)
     {
 
         $ordini_testata =  Ordine_Testata::find($id);

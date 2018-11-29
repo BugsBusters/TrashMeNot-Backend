@@ -66,7 +66,7 @@ Route::middleware('auth:api')->delete('/prodotto/{id}','ProdottoController@delet
 
 //Route Ordini Testata
 
-Route::middleware('auth:api')->get('/ordinitestate','OrdiniTestataController@all');
+Route::middleware('auth:api')->get('/ordinitestata','OrdiniTestataController@all');
 Route::middleware('auth:api')->get('/ordinetestata/{id}','OrdiniTestataController@find');
 Route::middleware('auth:api')->put('/ordinetestata','OrdiniTestataController@put');
 Route::middleware('auth:api')->patch('/ordinetestata/{id}','OrdiniTestataController@patch');
