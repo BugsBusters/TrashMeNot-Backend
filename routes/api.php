@@ -27,7 +27,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 //Route Tips
 Route::get('/tips','TipsController@all');
-Route:get('/tip/{id}','TipsController@find');
+Route::get('/tip/{id}','TipsController@find');
 Route::put('/tip','TipsController@put');
 Route::patch('/tip/{id}','TipsController@patch');
 Route::delete('/tip/{id}','TipsController@delete');
