@@ -36,3 +36,10 @@ Route::middleware('auth:api')->put('/categoria','CategorieController@put');
 Route::middleware('auth:api')->patch('/categoria/{id}','CategorieController@patch');
 Route::middleware('auth:api')->delete('/categoria/{id}','CategorieController@delete');
 
+//Route negozio
+Route::middleware('auth:api')->get('/negozi','NegozioController@all');
+Route::middleware('auth:api')->get('/negozio/{id}','NegozioController@find');
+Route::middleware('auth:api')->put('/negozio','NegozioController@put');
+Route::middleware('auth:api')->patch('/negozio/{id}','NegozioController@patch');
+Route::middleware('auth:api')->delete('/negozio/{id}','NegozioController@delete');
+

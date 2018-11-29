@@ -30,7 +30,7 @@ class CategoriaControllerTest extends TestCase
     public function testFind()
     {
         $id = Categoria::all()->last()->id;
-        $this->json('GET', "/api/categoria/$id")->assertStatus(200);
+        $this->json('GET', "/api/negozi/$id")->assertStatus(200);
     }
 
     public function testPatch()
