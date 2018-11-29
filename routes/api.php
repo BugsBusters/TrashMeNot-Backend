@@ -26,11 +26,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 //Route Tips
-Route::middleware('auth:api')->get('/tips','TipsController@all');
-Route::middleware('auth:api')->get('/tip/{id}','TipsController@find');
-Route::middleware('auth:api')->put('/tip','TipsController@put');
-Route::middleware('auth:api')->patch('/tip/{id}','TipsController@patch');
-Route::middleware('auth:api')->delete('/tip/{id}','TipsController@delete');
+Route::get('/tips','TipsController@all');
+Route:get('/tip/{id}','TipsController@find');
+Route::put('/tip','TipsController@put');
+Route::patch('/tip/{id}','TipsController@patch');
+Route::delete('/tip/{id}','TipsController@delete');
 
 
 //Route categoria
