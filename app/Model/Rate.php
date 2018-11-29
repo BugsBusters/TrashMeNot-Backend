@@ -10,4 +10,5 @@ class Rate extends Model
     protected $table = 'rate';
     public $timestamps = false;
 
+
 }

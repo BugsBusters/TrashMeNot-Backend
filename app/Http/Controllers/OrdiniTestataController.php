@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\Ordine_Testata;
+use App\Model\Ordini_Dettagli;
 use Illuminate\Http\Request;
 
 class OrdiniTestataController extends Controller
@@ -56,7 +57,16 @@ class OrdiniTestataController extends Controller
             return response()->json("Eliminato", 200);
         return response()->json($id, 500);
     }
+    
+    /**
+     * Metodo che prende tutti i dettagli della testata
+     * 
+     */
 
+    public function allDettagli($id)
+    {
+        return response()->json(Ordine_Testata::findOrFail($id)->with('dettagli')->get(),200);
+    }
 
 
 }
