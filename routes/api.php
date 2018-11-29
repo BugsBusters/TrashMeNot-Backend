@@ -19,3 +19,11 @@ Route::post('/register','Auth\RegisterController@apiRegister');
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::middleware('auth:api')->get('/tips','TipsController@all');
+Route::middleware('auth:api')->get('/tip/{id}','TipsController@find');
+Route::middleware('auth:api')->put('/tip','TipsController@put');
+Route::middleware('auth:api')->patch('/tip/{id}','TipsController@patch');
+Route::middleware('auth:api')->delete('/tip/{id}','TipsController@delete');
+
