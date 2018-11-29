@@ -72,3 +72,29 @@ Route::middleware('auth:api')->put('/ordinetestata','OrdiniTestataController@put
 Route::middleware('auth:api')->patch('/ordinetestata/{id}','OrdiniTestataController@patch');
 Route::middleware('auth:api')->delete('/ordinetestata/{id}','OrdiniTestataController@delete');
 
+//Route Ordini Testata
+
+Route::middleware('auth:api')->get('/ordinitestata','OrdiniTestataController@all');
+Route::middleware('auth:api')->get('/ordinetestata/{id}','OrdiniTestataController@find');
+Route::middleware('auth:api')->put('/ordinetestata','OrdiniTestataController@put');
+Route::middleware('auth:api')->patch('/ordinetestata/{id}','OrdiniTestataController@patch');
+Route::middleware('auth:api')->delete('/ordinetestata/{id}','OrdiniTestataController@delete');
+
+
+//Route Risposte
+
+//restituisce tutte le risposte di una domanda
+Route::middleware('auth:api')->get('/domanda/{id}/risposte','RisposteController@all');
+
+//trova risposta da id
+Route::middleware('auth:api')->get('/risposta/{id}','RisposteController@find');
+
+//aggiungi risposta con domanda_id
+Route::middleware('auth:api')->put('/domanda/{dom_id}/risposta','RisposteController@put');
+
+//modifica risposta da id
+Route::middleware('auth:api')->patch('/risposta/{id}','RisposteController@patch');
+
+//cancella risposta da id
+Route::middleware('auth:api')->delete('/risposta/{id}','RisposteController@delete');
+
