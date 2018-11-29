@@ -21,9 +21,18 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
+//Route Tips
 Route::middleware('auth:api')->get('/tips','TipsController@all');
 Route::middleware('auth:api')->get('/tip/{id}','TipsController@find');
 Route::middleware('auth:api')->put('/tip','TipsController@put');
 Route::middleware('auth:api')->patch('/tip/{id}','TipsController@patch');
 Route::middleware('auth:api')->delete('/tip/{id}','TipsController@delete');
+
+
+//Route categoria
+Route::middleware('auth:api')->get('/categorie','CategorieController@all');
+Route::middleware('auth:api')->get('/categoria/{id}','CategorieController@find');
+Route::middleware('auth:api')->put('/categoria','CategorieController@put');
+Route::middleware('auth:api')->patch('/categoria/{id}','CategorieController@patch');
+Route::middleware('auth:api')->delete('/categoria/{id}','CategorieController@delete');
 
