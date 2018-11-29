@@ -47,7 +47,7 @@ class RateController extends Controller
     }
 
     public function delete($id)
-        
+
     {
         if(Rate::destroy($id))
             return response()->json("Eliminato", 200);
