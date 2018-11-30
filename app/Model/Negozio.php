@@ -11,15 +11,6 @@ class Negozio extends Model
     public $timestamps = false;
 
 
-    //TODO
-    /*
-    public function user()
-    {
-        return $this->hasOne('App\Model\User',id);
-    }*/
-
-}
-
     public function prodotti()
     {
         return $this->hasMany('App\Model\Prodotto','commerciante_id','id');

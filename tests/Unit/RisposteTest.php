@@ -43,7 +43,7 @@ class RisposteTest extends TestCase
         $this->json('PATCH', "/api/risposta/$id", [
             'risposta' => "risposta prova",
             'esatto' => 0,
-            'domande_id' => 1,
+            'domande_id' => 11,
 
         ])->assertStatus(200);
     }

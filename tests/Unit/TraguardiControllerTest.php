@@ -22,7 +22,7 @@ class TraguardiControllerTest extends TestCase
     {
         $this->json('PUT','/api/traguardo/',[
             'user_id' => '1',
-            'badge_id' => '1',
+            'badge_id' => '4',
         ])->assertStatus(200);
     }
 
@@ -41,7 +41,7 @@ class TraguardiControllerTest extends TestCase
         $id = Traguardo::all()->last()->id;
         $this->json('PATCH',"/api/traguardo/$id",[
             'user_id' => '1',
-            'badge_id' => '1',
+            'badge_id' => '4',
         ])->assertStatus(200);
     }
     public function testDelete()
