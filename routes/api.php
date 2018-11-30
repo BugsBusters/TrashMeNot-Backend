@@ -61,7 +61,7 @@ Route::middleware('auth:api')->delete('/domanda/{id}','DomandeController@delete'
 //Route Prodotto
 
 Route::get('/prodotti','ProdottoController@all');
-Route::et('/prodotto/{id}','ProdottoController@find');
+Route::get('/prodotto/{id}','ProdottoController@find');
 Route::get('/prodotto/{id}/rate','ProdottoController@AllRate');
 Route::middleware('auth:api')->put('/prodotto','ProdottoController@put');
 Route::middleware('auth:api')->patch('/prodotto/{id}','ProdottoController@patch');
