@@ -10,6 +10,7 @@ namespace Tests\Unit;
 
 
 use App\Model\Negozio;
+use App\User;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Tests\TestCase;
 
@@ -47,6 +48,12 @@ class NegozioControllerTest extends TestCase
             'user_id' => '1',
             'p_iva' =>'123456789'
         ])->assertStatus(200);
+    }
+
+    public function testnegozioUser()
+    {
+        $id = User::all()->last()->id;
+        $this->json('GET', "/api/user/$id/negozio")->assertStatus(200);
     }
 
     public function testDelete()

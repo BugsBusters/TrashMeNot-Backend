@@ -8,21 +8,27 @@
 
 namespace Tests\Unit;
 
-
+use Illuminate\Foundation\Testing\WithoutMiddleware;
 use App\Model\Badge;
 use Tests\TestCase;
 
 class BadgeControllerTest extends TestCase
 {
 
+    use WithoutMiddleware;
+
     public function testPut()
     {
-        $this->json('PUT','/api/badge/',[
+
+        $this->json('PUT','/api/badge',[
             'foto' => 'foto',
             'testo' => 'testo',
-            'punti' => '20',
+            'punti' => '2'
         ])->assertStatus(200);
     }
+
+
+
 
     public function testAll()
     {

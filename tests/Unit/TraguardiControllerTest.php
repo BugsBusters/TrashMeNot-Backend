@@ -10,6 +10,7 @@ namespace Tests\Unit;
 
 
 use App\Model\Traguardo;
+use App\User;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Tests\TestCase;
 
@@ -47,6 +48,13 @@ class TraguardiControllerTest extends TestCase
     {
         $id = Traguardo::all()->last()->id;
         $this->json('DELETE',"/api/traguardo/$id")->assertStatus(200);
+    }
+
+
+    public function testUserBadges()
+    {
+        $id = User::all()->last()->id;
+        $this->json('GET', "/api/user/$id/badge")->assertStatus(200);
     }
 
 

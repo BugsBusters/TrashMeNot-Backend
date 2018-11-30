@@ -10,4 +10,9 @@ class Badge extends Model
     protected $table = 'badge';
     public $timestamps = false;
 
+    public function traguardo()
+    {
+        return $this->hasOne('App\Model\Traguardo');
+    }
+
 }

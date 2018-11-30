@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\Negozio;
+use App\User;
 use http\Env\Response;
 use Illuminate\Http\Request;
 
@@ -64,6 +65,12 @@ class NegozioController extends Controller
         return response()->json($id, 500);
     }
 
+
+
+    public function negozioUser($id)
+    {
+        return response()->json(User::findOrFail($id)->with('negozio')->get(), 200);
+    }
 
 
 }
