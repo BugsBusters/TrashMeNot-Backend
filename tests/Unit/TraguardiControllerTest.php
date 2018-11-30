@@ -47,6 +47,7 @@ class TraguardiControllerTest extends TestCase
             'badge_id' => '4',
         ])->assertStatus(200);
     }
+    /*
     public function testDelete()
     {
         $id = Traguardo::all()->last()->id;
@@ -59,7 +60,7 @@ class TraguardiControllerTest extends TestCase
         $id = User::all()->last()->id;
         $this->json('GET', "/api/user/$id/badge")->assertStatus(200);
     }
-
+*/
 
 
 

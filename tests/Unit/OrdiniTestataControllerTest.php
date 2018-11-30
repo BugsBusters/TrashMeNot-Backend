@@ -17,7 +17,7 @@ class OrdiniTestataControllerTest extends TestCase
 {
     use WithoutMiddleware;
 
-
+/*
     public function testPut()
     {
         $this->json('PUT','/api/ordinetestata/',[
@@ -27,6 +27,7 @@ class OrdiniTestataControllerTest extends TestCase
             "totale" => "100",
         ])->assertStatus(200);
     }
+*/
 
     public function testAll()
     {
