@@ -11,8 +11,11 @@ class CategorieSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('categorie')->insert([
-            'categoria' => 'Categoria1'
-        ]);
+        $categorie = ["Vestiti", "Scuola", "Accessori", "Arredamento", "Giocattolo", "Tecnologia"];
+        foreach ($categorie as $categoria){
+            DB::table('categorie')->insert([
+                'categoria' => $categoria
+            ]);
+        }
     }
 }

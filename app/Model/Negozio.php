@@ -10,6 +10,7 @@ class Negozio extends Model
     protected $table = 'negozi';
     public $timestamps = false;
 
+
     //TODO
     /*
     public function user()
@@ -18,3 +19,11 @@ class Negozio extends Model
     }*/
 
 }
+
+    public function prodotti()
+    {
+        return $this->hasMany('App\Model\Prodotto','commerciante_id','id');
+    }
+
+}
+

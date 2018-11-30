@@ -46,4 +46,11 @@ class CategoriaControllerTest extends TestCase
         $id = Categoria::all()->last()->id;
         $this->json('DELETE',"/api/categoria/$id")->assertStatus(200);
     }
+
+    public function testAllProdotti()
+    {
+        $id = Categoria::all()->last()->id;
+        $this->json('GET',"/api/categoria/$id/prodotti")->assertStatus(200);
+
+    }
 }

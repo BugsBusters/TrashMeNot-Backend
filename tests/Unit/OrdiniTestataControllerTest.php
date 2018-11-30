@@ -58,6 +58,12 @@ class OrdiniTestataControllerTest extends TestCase
         $this->json('DELETE',"/api/ordinetestata/$id")->assertStatus(200);
     }
 
+    public function testAllDettagli()
+    {
+        $id = Ordine_Testata::all()->last()->id;
+        $this->json('GET',"api/ordinetestata/$id/dettagli")->assertStatus(200);
+    }
+
 
 
 

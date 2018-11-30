@@ -60,5 +60,13 @@ class ProdottoController extends Controller
         return response()->json($id, 500);
 
     }
+    /**
+     * Metodo che prende tutti i rate associato ad un prodotto
+     */
+
+    public function AllRate($id)
+    {
+        return response()->json(Prodotto::findOrFail($id)->with('prodotti')->get(),200);
+    }
 
 }
