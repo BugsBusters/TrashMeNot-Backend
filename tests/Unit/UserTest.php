@@ -11,10 +11,4 @@ use Tests\TestCase;
 
 class UserTest extends TestCase{
 
-
-    public function testBadge()
-    {
-        $id= \App\User::find($id)->
-        $this->json('GET',"/api/user/$id/badge")->assertStatus(200);
-    }
 }

@@ -9,6 +9,7 @@
 namespace Tests\Unit;
 
 
+use App\Model\Badge;
 use App\Model\Traguardo;
 use App\User;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
@@ -20,9 +21,11 @@ class TraguardiControllerTest extends TestCase
 
     public function testPut()
     {
+        $idbadge = Badge::all()->last()->id;
+        $iduser = User::all()->last()->id;
         $this->json('PUT','/api/traguardo/',[
-            'user_id' => '1',
-            'badge_id' => '4',
+            'user_id' => $iduser,
+            'badge_id' => $idbadge
         ])->assertStatus(200);
     }
 
