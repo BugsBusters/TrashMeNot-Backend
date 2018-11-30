@@ -60,9 +60,9 @@ Route::middleware('auth:api')->delete('/domanda/{id}','DomandeController@delete'
 
 //Route Prodotto
 
-Route::middleware('auth:api')->get('/prodotti','ProdottoController@all');
-Route::middleware('auth:api')->get('/prodotto/{id}','ProdottoController@find');
-Route::middleware('auth:api')->get('/prodotto/{id}/rate','ProdottoController@AllRate');
+Route::get('/prodotti','ProdottoController@all');
+Route::get('/prodotto/{id}','ProdottoController@find');
+Route::get('/prodotto/{id}/rate','ProdottoController@AllRate');
 Route::middleware('auth:api')->put('/prodotto','ProdottoController@put');
 Route::middleware('auth:api')->patch('/prodotto/{id}','ProdottoController@patch');
 Route::middleware('auth:api')->delete('/prodotto/{id}','ProdottoController@delete');
