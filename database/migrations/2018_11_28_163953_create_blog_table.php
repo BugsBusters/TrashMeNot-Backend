@@ -10,7 +10,7 @@ class CreateBlogTable extends Migration {
 		Schema::create('blog', function(Blueprint $table) {
 			$table->increments('id');
 			$table->string('titolo', 500);
-			$table->string('descrizione', 500);
+			$table->text('descrizione', 50000);
 		});
 	}
 
