@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Badge;
 use App\Model\Traguardo;
+use App\User;
 use Illuminate\Http\Request;
 
 class TraguardiController extends Controller
@@ -43,6 +45,11 @@ class TraguardiController extends Controller
         if(Traguardo::destroy($id))
             return response()->json("Eliminato", 200);
         return response()->json($id, 500);
+    }
+
+    public function userBadges($id)
+    {
+        return response()->json(Badge::findOrFail($id)->with('traguardo')->get(), 200);
     }
 
 

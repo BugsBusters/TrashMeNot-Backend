@@ -128,3 +128,9 @@ Route::middleware('auth:api')->put('/badge','BadgeController@put');
 Route::middleware('auth:api')->patch('/badge/{id}','BadgeController@patch');
 Route::middleware('auth:api')->delete('/badge/{id}','BadgeController@delete');
 
+//Route User
+
+Route::middleware('auth:api')->get('/user/{id}/negozio','NegozioController@negozioUser');
+
+//TraguardiController
+Route::middleware('auth:api')->get('/user/{id}/badge','TraguardiController@userBadges');
