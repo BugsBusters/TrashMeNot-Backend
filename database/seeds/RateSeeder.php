@@ -9,7 +9,7 @@
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
 
-class RateSeeder
+class RateSeeder extends Seeder
 {
 
     public function run ()
