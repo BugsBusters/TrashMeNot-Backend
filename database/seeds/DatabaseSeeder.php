@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call(OrdiniTestataSeeder::class);
         $this->call(OrdiniDettagliSeeder::class);
-        $this->call(RateSeeder::class);
+        //$this->call(RateSeeder::class);
 
         $this->call(BlogSeeder::class);
 
