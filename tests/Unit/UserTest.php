@@ -9,6 +9,11 @@
 
 use Tests\TestCase;
 
-class UserTest extends TestCase{
+class UserTest extends TestCase
+{
 
+    public function testTrue()
+    {
+        $this->assertTrue(true);
+    }
 }
